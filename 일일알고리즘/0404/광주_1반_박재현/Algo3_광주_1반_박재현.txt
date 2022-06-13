@@ -1,0 +1,13 @@
+3-1
+[4, 10, 5, 11, 15, 7, 8, 20]
+
+3-2
+[5, 10, 7, 11, 15, 20, 8]
+
+3-3
+heap.append(newItem)
+index = len(heap) - 1
+
+while(index > 1 and newItem < heap[index // 2]:
+    heap[index], heap[index // 2] = heap[index // 2], heap[index]
+    index = index // 2
