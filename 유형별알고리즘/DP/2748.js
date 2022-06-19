@@ -8,9 +8,7 @@ function fibo(x) {
   if (x === 0) return 0;
   if (x === 1) return 1;
   if (dp[x] !== -1) return dp[x];
-  dp[x] = fibo(x - 1) + fibo(x - 2);
+  dp[x] = BigInt(fibo(x - 1)) + BigInt(fibo(x - 2));
   return dp[x];
 }
-console.log(fibo(N));
-
-console.log(dp);
+console.log(fibo(N).toString().split("n")[0]);
