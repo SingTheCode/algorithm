@@ -20,17 +20,16 @@ function solution(N, arr) {
     else resultObj[value[1]] = 1;
   });
 
-  result = Object.entries(resultObj);
-  result = result.sort((a, b) => {
-    if (a[0] > b[0]) return 1;
-    else return -1;
-  });
-
-  result = result.map((value) => {
-    let temp = value[0] + " " + value[1];
-    return temp;
-  });
-  result = result.join("\n");
+  result = Object.entries(resultObj)
+    .sort((a, b) => {
+      if (a[0] > b[0]) return 1;
+      else return -1;
+    })
+    .map((value) => {
+      let temp = value[0] + " " + value[1];
+      return temp;
+    })
+    .join("\n");
   return result;
 }
 
